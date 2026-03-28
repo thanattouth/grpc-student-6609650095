@@ -32,10 +32,6 @@ func main() {
 		log.Fatalf("Error calling ListStudents: %v", err)
 	}
 
-	if err != nil {
-		log.Fatalf("Error calling GetStudent: %v", err)
-	}
-
 	log.Println("Student List:")
 	for _, s := range listRes.GetStudent() {
 		log.Printf("- ID: %d, Name: %s, Phone: %s", s.Id, s.Name, s.Phone)
